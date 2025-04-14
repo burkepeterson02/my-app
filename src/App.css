@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Digital-7-mono';
+  src: url('./assets/fonts/digital-7-mono.ttf') format('truetype');
+}
+
+#root {
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "team1 team1 time time time team2 team2"
+    "score1 score1 bonus1 possession bonus2 score2 score2"
+    "foul1 foul1 shotclock shotclock shotclock foul2 foul2";
+  
+  align-items: center;
+  gap: 1rem;
+}
+
+.clock {
+  grid-area: time;
+}
+
+.score1 {
+  grid-area: score1;
+}
+
+.score2 {
+  grid-area: score2;
+}
+
+.bonus1 {
+  grid-area: bonus1;
+}
+.bonus2 {
+  grid-area: bonus2;
+}
+
+.foul1 {
+  grid-area: foul1;
+}
+.foul2 {
+  grid-area: foul2;
+}
+
+.shotclock {
+  grid-area: shotclock;
+}
+
+.possession {
+  grid-area: possession;
+}
+
+.team-name {
+  font-size: 3rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.right {
+  grid-area: team2;
+}
+
+.left {
+  grid-area: team1;
+}
+
+.digital-display {
+  font-family: 'Digital-7-mono', sans-serif;
+  background: black;
+  color: red;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 0 0 0.25rem red, 0 0 0.5rem darkred;
+  border-radius: 0.25rem;
+  padding: 0.2em 0.4em;
+  margin: 0.2rem;
+}
+
+.display-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center; /* Centers items horizontally */
+  gap: 0.1rem;
+}
+
+
+.display-buttons {
+  display: flex;
+  gap: 0.3rem; /* Space between buttons */
+}
+
+.score {
+  font-size: 8rem;
+  min-width: 1.5em
+}
+
+button {
+  background: linear-gradient(to bottom, #444, #222);
+  border: 2px solid #111;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.0rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 3px #111;
+}
+
+.timer-text {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.scrolling-standings {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000; /* Optional: background color for the scrolling bar */
+  color: white; /* Text color */
+  font-size: 16px;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap; /* Ensures the text stays in one line */
+  animation: scroll-left 60s linear infinite; /* Increase the duration for smoothness */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(10%); /* Start offscreen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End offscreen to the left */
+  }
+}
+
