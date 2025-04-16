@@ -147,6 +147,7 @@ button {
 
 html, body {
   max-width: 100vw;
+  max-height: 100vh;
   overflow-x: hidden;
   background-color: #04470a;
   color: white;
@@ -181,8 +182,8 @@ html, body {
     padding: 0 0.5rem;
     grid-template-areas:
     "time time time time time time"
-    "team1 team1 team1 team2 team2 team2"
-    "score1 score1 score1 score2 score2 score2"
+    "team1 team1 . . team2 team2"
+    "score1 score1 . . score2 score2"
     "bonus1 bonus1 possession possession bonus2 bonus2"
     "foul1 foul1 shotclock shotclock foul2 foul2";
   grid-template-columns: 1fr 1fr;
