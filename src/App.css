@@ -176,6 +176,15 @@ html, body {
   .grid-container {
     gap: 0.5rem;
     padding: 0 0.5rem;
+    grid-template-areas:
+    "time time"
+    "team1 team2"
+    "score1 score2"
+    "bonus1 bonus2"
+    "possession possession"
+    "foul1 foul2"
+    "shotclock shotclock";
+  grid-template-columns: 1fr 1fr;
   }
 
   .scrolling-standings {
