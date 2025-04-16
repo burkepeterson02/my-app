@@ -47,7 +47,7 @@ function CountdownTimer() {
         </h1>
       )}
 
-      <div className="timer-buttons">
+      <div className="display-buttons">
         <button onClick={() => setIsRunning(!isRunning)}>
           {isRunning ? "⏸" : "⏵"}
         </button>

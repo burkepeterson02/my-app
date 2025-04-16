@@ -101,14 +101,14 @@
 
 button {
   background: linear-gradient(to bottom, #444, #222);
-  border: 2px solid #111;
-  border-radius: 5px;
+  border: .125rem solid #111;
+  border-radius: .3rem;
   color: white;
   font-size: 1.0rem;
-  padding: 8px 16px;
+  padding: .5rem 1rem;
   cursor: pointer;
   text-transform: uppercase;
-  box-shadow: 0 3px #111;
+  box-shadow: 0 .2rem #111;
 }
 
 .timer-text {
@@ -124,7 +124,7 @@ button {
   overflow: hidden;
   background-color: #000; /* Optional: background color for the scrolling bar */
   color: white; /* Text color */
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .scrolling-text {
@@ -142,3 +142,7 @@ button {
   }
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
